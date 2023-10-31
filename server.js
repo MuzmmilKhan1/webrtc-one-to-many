@@ -14,7 +14,12 @@ app.post("/consumer", async ({ body }, res) => {
         iceServers: [
             {
                 urls: "stun:stun.stunprotocol.org"
-            }
+            },
+            {
+            urls: "turn:turn.safetixstreaming.com",
+            username: "chris",
+            credential: "Capricorn190RCapricorn13F"
+          }
         ]
     });
     const desc = new webrtc.RTCSessionDescription(body.sdp);
